@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love ✨ | A Celebration Just For You</title>
+    <meta name="description" content="A magical, romantic birthday celebration dedicated to the most special person in the world.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cinzel+Decorative:wght@700&family=Noto+Serif+Devanagari:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Floating Petals, Hearts & Sparkles -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- Floating Audio Control & Music Bar -->
+    <div class="music-pill" id="music-pill">
+        <button id="music-toggle-btn" class="music-btn" aria-label="Play romantic music">
+            <span class="music-icon" id="music-icon">🎵</span>
+            <span class="music-label" id="music-label">Play Music</span>
+            <div class="equalizer" id="equalizer">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </button>
+    </div>
+
+    <!-- Hidden audio element in case user provides local audio file -->
+    <audio id="bg-audio" loop preload="auto"></audio>
+
+    <main class="page-container">
+        
+        <!-- ================= HERO SECTION ================= -->
+        <header class="hero-section" id="hero">
+            <div class="hero-content">
+                <div class="badge-pill">
+                    <span class="sparkle-icon">✨</span>
+                    <span>To The Queen Of My Heart</span>
+                    <span class="sparkle-icon">✨</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Happy Birthday, <br>
+                    <span class="highlight-text" id="hero-recipient-name">My Love</span> 💖
+                </h1>
+                
+                <p class="hero-subtitle" id="hero-subtitle">
+                    Today is all about celebrating the most beautiful soul who makes my entire world shine brighter every single day.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#spotlight-section" class="btn btn-primary" id="start-btn">
+                        <span>See My Favorite Sanjana 👑</span>
+                    </a>
+                    <a href="#video-section" class="btn btn-secondary" id="song-btn">
+                        <span>Our Romantic Song 🦚❤️</span>
+                    </a>
+                    <a href="#cake-section" class="btn btn-outline" id="cake-btn">
+                        <span>Cut Cake 🎂</span>
+                    </a>
+                    <a href="#letter-section" class="btn btn-outline" id="letter-btn">
+                        <span>Love Letter 💌</span>
+                    </a>
+                </div>
+
+                <div class="scroll-down-hint">
+                    <span>Unwrap the memories below</span>
+                    <div class="mouse-icon">
+                        <div class="mouse-wheel"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= PRIORITY SPOTLIGHT: SANJANA ================= -->
+        <section class="section spotlight-section" id="spotlight-section">
+            <div class="section-header">
+                <span class="section-tag cute-tag">👑 The Star Of My Heart</span>
+                <h2 class="section-title">My Favorite Person, My Sanjana 💖</h2>
+                <p class="section-desc">There are millions of photos in the world, but this one will always have my whole heart.</p>
+            </div>
+
+            <div class="priority-showcase-card">
+                <div class="priority-ribbon">⭐ Most Special Memory ⭐</div>
+                <div class="priority-content-grid">
+                    <div class="priority-image-container">
+                        <div class="priority-polaroid-frame">
+                            <div class="washi-tape-cute"></div>
+                            <img src="images/original_rooftop.jpg" alt="Sanjana smiling sweetly with hands under chin" class="priority-img" id="priority-spotlight-img">
+                            <div class="priority-sparkles-badge">✨ Sanjana ✨</div>
+                        </div>
+                    </div>
+
+                    <div class="priority-quotes-container">
+                        <div class="hindi-quote-card">
+                            <div class="quote-symbol">❝</div>
+                            <p class="hindi-quote-text" id="hindi-quote-main">
+                                तेरी मासूम सी हंसी, और ये प्यारी सी अदा... <br>
+                                बस यही तो है संजना, जिसपे ये दिल हर रोज़ फिदा है! 💖
+                            </p>
+                            <p class="hindi-quote-sub" id="hindi-quote-sub">
+                                “तेरे मुस्कुराने से ही तो मेरी दुनिया में रौनक है... <br>
+                                जनमदिन बहुत बहुत मुबारक हो मेरी जान! ✨🌸”
+                            </p>
+                            <div class="quote-decor-row">
+                                <span class="cute-badge">🌸 Meri Pyaari Sanjhu</span>
+                                <span class="cute-badge">🎀 My Favorite Smile</span>
+                                <span class="cute-badge">🦚 Dil Ki Dhadkan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ROMANTIC MUSIC VIDEO SECTION ================= -->
+        <section class="section video-section" id="video-section">
+            <div class="section-header">
+                <span class="section-tag cute-tag">🎵 Our Romantic Melody</span>
+                <h2 class="section-title">मनवा लागे... ओ मनवा लागे 🦚❤️</h2>
+                <p class="section-desc">
+                    Press play and immerse in our romantic song dedicated to you on your special day.
+                </p>
+            </div>
+
+            <div class="video-player-container">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video id="romantic-music-video" playsinline controls loop preload="metadata" poster="images/original_rooftop.jpg">
+                            <source src="music_video/manwa_laage.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-caption-bar">
+                        <div class="song-info">
+                            <span class="music-note-icon">🎶</span>
+                            <div>
+                                <h4 class="song-title">Manwa Laage (मनवा लागे)</h4>
+                                <p class="song-artist">Arijit Singh & Shreya Ghoshal • Dedicated to Sanjana 💖</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary video-play-toggle" id="custom-video-btn">
+                            ▶ Play Song Video
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= INTERACTIVE CAKE & WISH SECTION ================= -->
+        <section class="section cake-section" id="cake-section">
+            <div class="section-header">
+                <span class="section-tag">Make A Secret Wish</span>
+                <h2 class="section-title">Blow Out Your Birthday Candles</h2>
+                <p class="section-desc" id="cake-instruction-text">
+                    Click on each candle flame to blow it out and make your birthday wish! ✨
+                </p>
+            </div>
+
+            <div class="cake-container">
+                <!-- 3D CSS Layered Birthday Cake -->
+                <div class="birthday-cake" id="birthday-cake">
+                    <!-- Top Cake Layer -->
+                    <div class="cake-tier tier-top">
+                        <div class="candle-cluster">
+                            <!-- Candle 1 -->
+                            <div class="candle candle-1" data-candle="1" role="button" tabindex="0" title="Click to blow out">
+                                <div class="flame" id="flame-1"></div>
+                                <div class="smoke" id="smoke-1"></div>
+                                <div class="wick"></div>
+                                <div class="candle-body"></div>
+                            </div>
+                            <!-- Candle 2 (Center) -->
+                            <div class="candle candle-2" data-candle="2" role="button" tabindex="0" title="Click to blow out">
+                                <div class="flame" id="flame-2"></div>
+                                <div class="smoke" id="smoke-2"></div>
+                                <div class="wick"></div>
+                                <div class="candle-body"></div>
+                            </div>
+                            <!-- Candle 3 -->
+                            <div class="candle candle-3" data-candle="3" role="button" tabindex="0" title="Click to blow out">
+                                <div class="flame" id="flame-3"></div>
+                                <div class="smoke" id="smoke-3"></div>
+                                <div class="wick"></div>
+                                <div class="candle-body"></div>
+                            </div>
+                        </div>
+                        <div class="frosting-drips">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <!-- Middle Cake Layer -->
+                    <div class="cake-tier tier-middle">
+                        <div class="cake-berries">
+                            <span class="berry">🍓</span>
+                            <span class="berry">🌸</span>
+                            <span class="berry">🍓</span>
+                            <span class="berry">🌸</span>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Cake Tier -->
+                    <div class="cake-tier tier-bottom">
+                        <div class="cake-stripes"></div>
+                    </div>
+
+                    <!-- Plate -->
+                    <div class="cake-plate"></div>
+                </div>
+
+                <!-- Post-blow Celebration Card (Hidden until all 3 candles are blown) -->
+                <div class="wish-reveal-card" id="wish-reveal-card">
+                    <div class="wish-icon">🎉</div>
+                    <h3 class="wish-title">Wish Sent to the Stars! ✨</h3>
+                    <p class="wish-body" id="after-blow-text">
+                        May every single dream in your beautiful heart come true this year. I love you more than words could ever say! 💕
+                    </p>
+                    <button class="btn btn-sm btn-secondary" id="relight-cake-btn">Relight Candles 🕯️</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= POLAROID SCRAPBOOK PHOTO GALLERY ================= -->
+        <section class="section gallery-section" id="gallery-section">
+            <div class="section-header">
+                <span class="section-tag">Our Captured Moments</span>
+                <h2 class="section-title">The Scrapbook of Memories</h2>
+                <p class="section-desc">
+                    Every picture holds a thousand smiles and endless reasons why you are so special.
+                </p>
+            <!-- Gallery Mode Toggle -->
+            <div class="gallery-toggle-bar">
+                <button class="gallery-toggle-btn active" id="toggle-enhanced-btn">
+                    <span>✨ Fairytale Photoshoot</span>
+                </button>
+                <button class="gallery-toggle-btn" id="toggle-original-btn">
+                    <span>📷 Original Memories</span>
+                </button>
+            </div>
+
+            <!-- Polaroid Grid -->
+            <div class="polaroid-grid" id="polaroid-grid">
+                <!-- Dynamically injected from config.js or fallback -->
+            </div>
+        </section>
+
+        <!-- ================= INTERACTIVE WAX-SEAL LOVE LETTER ================= -->
+        <section class="section letter-section" id="letter-section">
+            <div class="section-header">
+                <span class="section-tag">From My Soul To Yours</span>
+                <h2 class="section-title">A Sealed Letter For You</h2>
+                <p class="section-desc">Tap the golden wax heart seal to open your private letter.</p>
+            </div>
+
+            <div class="envelope-wrapper">
+                <div class="envelope" id="envelope">
+                    <!-- Envelope Flap -->
+                    <div class="envelope-flap" id="envelope-flap"></div>
+                    
+                    <!-- Wax Seal Button -->
+                    <button class="wax-seal" id="wax-seal-btn" aria-label="Open Love Letter">
+                        <span class="seal-heart">💖</span>
+                        <span class="seal-ring"></span>
+                        <span class="seal-tap-hint">Tap to open</span>
+                    </button>
+
+                    <!-- Letter Sheet Inside -->
+                    <div class="letter-paper" id="letter-paper">
+                        <div class="letter-stamp">💌</div>
+                        <h3 class="letter-title" id="letter-title">A Letter From My Heart</h3>
+                        <p class="letter-salutation" id="letter-salutation">To the most special girl in my world,</p>
+                        <div class="letter-body" id="letter-body">
+                            <!-- Injected from config -->
+                        </div>
+                        <p class="letter-closing" id="letter-closing">With all my love ❤️</p>
+                        <button class="btn btn-sm btn-outline close-letter-btn" id="close-letter-btn">Fold Letter ✉️</button>
+                    </div>
+
+                    <!-- Envelope Pocket -->
+                    <div class="envelope-pocket"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= REASONS WHY I LOVE YOU / MEMORY CAPSULE ================= -->
+        <section class="section reasons-section" id="reasons-section">
+            <div class="section-header">
+                <span class="section-tag">Infinite Reasons</span>
+                <h2 class="section-title">A Little Jar of Sweet Reminders</h2>
+                <p class="section-desc">Click below to open a little note of love from the jar.</p>
+            </div>
+
+            <div class="reasons-interactive-box">
+                <div class="capsule-card" id="capsule-card">
+                    <div class="capsule-badge" id="capsule-counter">Note #1</div>
+                    <p class="capsule-text" id="capsule-text">Click the button below to draw your first note! 💌</p>
+                    <div class="capsule-decor">✨ 💖 ✨</div>
+                </div>
+
+                <div class="reasons-controls">
+                    <button class="btn btn-primary" id="next-reason-btn">
+                        <span>Draw Another Reason 🌸</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= STORY TIMELINE ================= -->
+        <section class="section timeline-section" id="timeline-section">
+            <div class="section-header">
+                <span class="section-tag">Our Beautiful Journey</span>
+                <h2 class="section-title">Milestones We Cherish</h2>
+                <p class="section-desc">From the moment we met to celebrating your birthday today.</p>
+            </div>
+
+            <div class="timeline-container" id="timeline-container">
+                <!-- Injected from config -->
+            </div>
+        </section>
+
+        <!-- ================= POPPABLE BALLOONS SURPRISE ================= -->
+        <section class="section balloons-section" id="balloons-section">
+            <div class="section-header">
+                <span class="section-tag">Pop The Balloons!</span>
+                <h2 class="section-title">Surprise Birthday Messages</h2>
+                <p class="section-desc">Click or tap any balloon to pop it and reveal a hidden compliment! 🎈</p>
+            </div>
+
+            <div class="balloons-arena" id="balloons-arena">
+                <!-- Floating clickable balloons -->
+            </div>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="page-footer">
+            <div class="footer-heart">💖</div>
+            <p class="footer-text">
+                Crafted with endless love for your birthday & every day after.
+            </p>
+            <p class="footer-subtext">Happy Birthday, beautiful! ✨</p>
+            <button class="btn btn-sm btn-outline restart-btn" id="confetti-cannon-btn">
+                Launch Fireworks & Confetti 🎆
+            </button>
+        </footer>
+
+    </main>
+
+    <!-- Lightbox Modal for Photo Zoom -->
+    <div class="lightbox-modal" id="lightbox-modal">
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox-dialog">
+            <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close photo view">✕</button>
+            <div class="lightbox-image-wrap">
+                <img id="lightbox-img" src="" alt="Enlarged photo">
+            </div>
+            <div class="lightbox-info">
+                <p class="lightbox-caption" id="lightbox-caption"></p>
+                <span class="lightbox-date" id="lightbox-date"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
